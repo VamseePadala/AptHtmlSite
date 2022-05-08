@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamsee's Appointment Site</title>
+</head>
+<body>
+    <h1>Welcome to Vamsee's Appointment Site! What is your name?</h1>
+    <input id = "userId"> <br> <br>
+    <h1> What muscle did you want to workout? </h1>
+    <input id = "request"> <br><br> 
+    <h1> Next what date would you like to setup this workout for?</h1>
+    <input id = "date"> <br><br>
+    <h1> What time would you prefer the workout to be?</h1>
+    <input id = "time"> <br><br>
+    <button onclick = "createMessage()"> Submit </button>
+    <h1 id = "message">  </h1>
+
+    <style>
+        body {background-color: beige; text-align: center; color:black;}
+    </style>
+
+    <script>
+        function createMessage() {
+            let userId = document.querySelector("#userId");
+            let request = document.querySelector("#request");
+            let date = document.querySelector("#date");
+            let time = document.querySelector("#time");
+            let message = document.querySelector("#message")
+
+            message.innerHTML = "We have set an appointment set for  " + userId.value + " to work your " + request.value + ", on " + date.value + " at " + time.value;
+
+
+            
+
+        }
+    </script>
+</body>
+</html>
